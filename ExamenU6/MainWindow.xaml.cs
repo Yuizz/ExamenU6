@@ -23,6 +23,16 @@ namespace ExamenU6
         public MainWindow()
         {
             InitializeComponent();
+            List<Book> Books = new List<Book>();
+            Books.Add(new Book() { Title = "Harry Potter", Author = "JK Rowling", Editorial = "Salamandra", Taken = true, OwnedBy = "Jugo" });
+            Books.Add(new Book() { Title = "El juego de ender", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
+            Books.Add(new Book() { Title = "Harry Potter", Author = "JK Rowling", Editorial = "Salamandra", Taken = true, OwnedBy = "Jugo" });
+            ListBoxBooks.ItemsSource = Books; 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

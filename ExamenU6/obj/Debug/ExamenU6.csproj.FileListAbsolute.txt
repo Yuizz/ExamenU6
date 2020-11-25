@@ -1,0 +1,15 @@
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\bin\Debug\ExamenU6.exe.config
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\bin\Debug\ExamenU6.exe
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\bin\Debug\ExamenU6.pdb
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.csprojAssemblyReference.cache
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\MainWindow.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\App.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6_MarkupCompile.cache
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6_MarkupCompile.lref
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\MainWindow.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.g.resources
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.Properties.Resources.resources
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.csproj.GenerateResource.cache
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.csproj.CoreCompileInputs.cache
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.exe
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.pdb
