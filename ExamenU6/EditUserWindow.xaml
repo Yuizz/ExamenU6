@@ -1,18 +1,18 @@
-﻿<Window x:Class="ExamenU6.AddUserWindow"
+﻿<Window x:Class="ExamenU6.EditUserWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenU6"
         mc:Ignorable="d"
-        Title="Añadir usuario" Height="350" Width="352" ResizeMode="NoResize">
+        Title="Editar Usuario" Height="250" Width="352" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" FontFamily="Times New Roman" FontSize="24" Margin="10" HorizontalAlignment="Center">Añadir usuario</Label>
+        <Label Grid.Row="0" FontFamily="Times New Roman" FontSize="24" Margin="10" HorizontalAlignment="Center">Editar usuario</Label>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -20,18 +20,13 @@
             </Grid.ColumnDefinitions>
             <StackPanel Margin="10, 0" Grid.Column="0">
                 <TextBlock Margin="0, 5" FontSize="14">Nombre:</TextBlock>
-                <TextBlock Margin="0, 5" FontSize="14">Dirección: </TextBlock>
+                <TextBlock Margin="0, 5" FontSize="14">Dirección:</TextBlock>
                 <Button x:Name="TarjetaRFID" Margin="5,5" FontSize="14" Click="TarjetaRFID_Click">Tarjeta RFID</Button>
-                <TextBlock Margin="0,5" FontSize="14">Usuario:</TextBlock>
-                <TextBlock Name="Dato4" Margin="0,17" FontSize="14" Text=""></TextBlock>
             </StackPanel>
             <StackPanel Margin="10, 0" Grid.Column="1">
                 <TextBox Name="nombre" Margin="0,5" FontSize="14" TextChanged="nombre_TextChanged"/>
                 <TextBox Name="direccion" Margin="0,5" FontSize="14" TextChanged="direccion_TextChanged"/>
                 <TextBox Name="RFID" Margin="0,2,0,5" FontSize="14" IsReadOnly="True"/>
-                <RadioButton Name="btnStudent" Margin="0,5,0,1" Content="Estudiante" Click="btnStudent_Click"></RadioButton>
-                <RadioButton Name="btnTeacher" Margin="0,1,0,5" Content="Docente" Click="btnTeacher_Click"></RadioButton>
-                <TextBox Name="boxDato4" Margin="0,5, 0,5" FontSize="14" TextChanged="boxDato4_TextChanged" Visibility="Hidden"/>
             </StackPanel>
         </Grid>
         <WrapPanel Grid.Row="2" Margin="0,5" HorizontalAlignment="Center">

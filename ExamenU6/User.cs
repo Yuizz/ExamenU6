@@ -21,7 +21,7 @@ namespace ExamenU6
         public string Address { get => address; set => address = value; }
         public string Rfid { get => rfid; set => rfid = value; }
     }
-    class Student:User
+    public class Student:User
     {
         private string ctrlNum;
         public Student(string name, string address, string rfid, string ctrlNum):base(name, address, rfid)
@@ -30,7 +30,7 @@ namespace ExamenU6
         }
         public string CtrlNum { get => ctrlNum; set => ctrlNum = value; }
     }
-    class Teacher : User
+    public class Teacher : User
     {
         private string deparment;
         public Teacher(string name, string address, string rfid, string deparment) : base(name, address, rfid)

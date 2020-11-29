@@ -16,15 +16,15 @@ using System.ComponentModel;
 namespace ExamenU6
 {
     /// <summary>
-    /// Lógica de interacción para AddUserWindow.xaml
+    /// Ventana para agregar un nuevo usuario, con lectura de RFID por medio de la clase Tools
     /// </summary>
     public partial class AddUserWindow : Window
     {
-        private string name="";
-        private string address="";
-        private string rfid="0";
-        private string dato4="";
-        private string tipo="";
+        private string name;
+        private string address;
+        private string rfid="";
+        private string dato4;
+        private string tipo;
         private List<User> Usuarios;
         private Tools Arduino;
         public AddUserWindow(List<User> Users)
@@ -76,22 +76,41 @@ namespace ExamenU6
         {
             this.tipo = "Student";
             Dato4.Text = "Numero de control:";
+            boxDato4.Visibility = Visibility.Visible;
         }
 
         private void btnTeacher_Click(object sender, RoutedEventArgs e)
         {
             this.tipo = "Teacher";
             Dato4.Text = "Departamento:";
+            boxDato4.Visibility = Visibility.Visible;
         }
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
-            if (tipo == "Student")
+            if (this.tipo != null)
             {
-                Usuarios.Add(new Student(this.name, this.address, this.rfid, this.dato4));
-            }else if (tipo == "Teacher")
+                if (this.rfid != "" && this.rfid!="Arduino desconectado!!")
+                {
+                    if (tipo == "Student")
+                    {
+                        Usuarios.Add(new Student(this.name, this.address, this.rfid, this.dato4));
+                    }
+                    else if (tipo == "Teacher")
+                    {
+                        Usuarios.Add(new Teacher(this.name, this.address, this.rfid, this.dato4));
+                    }
+                    MessageBox.Show($"Usuario {this.name} añadido.", "Añadir usuario", MessageBoxButton.OK, MessageBoxImage.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Debes añadir una tarjeta RFID!", "Añadir usuario", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            else
             {
-                Usuarios.Add(new Teacher(this.name, this.address, this.rfid, this.dato4));
+                MessageBox.Show("Debes seleccionar un tipo de usuario!", "Añadir usuario", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 

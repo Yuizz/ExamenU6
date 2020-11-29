@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace ExamenU6
 {
+    /// <summary>
+    /// Proporciona herramientas, de momento solo proporciona el objeto capaz de leer una linea proveniente del puerto serial
+    /// </summary>
     class Tools
     {
-        string cadena = "";
+        string cadena;
         System.IO.Ports.SerialPort Port;
         bool isClosed=false;
         public void OpenPort(string name, int baudRate)
@@ -45,7 +48,7 @@ namespace ExamenU6
                 isClosed = true;
                 return "Arduino desconectado!!"; 
             }
-            while (cadena.Length < 1)
+            while (cadena.Length<1)
             {
                 try
                 {

@@ -28,13 +28,12 @@ namespace ExamenU6
             Books.Add(new Book() { Title = "Razer y la patatus del poder", Author = "JK Rowling", Editorial = "Salamandra", Taken = true, OwnedBy = "Jugo" });
             Books.Add(new Book() { Title = "El juego de ender", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
             Books.Add(new Book() { Title = "Harry Potter", Author = "JK Rowling", Editorial = "Salamandra", Taken = true, OwnedBy = "Jugo" });
-            Users.Add(new Student("Jugo", "Tangamandapio", "172606", "17260671"));
-            AddUserWindow AddUser = new AddUserWindow(Users);
+            Users.Add(new Student("Jugo", "Tangamandapio", " 0C 74 56 08", "17260671"));
+            EditUserWindow AddUser = new EditUserWindow(Users,0);
             AddUser.Show();
         }
         public static void ReceiveList(List<User> Usrs)
         {
-            //Users = Usrs;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
