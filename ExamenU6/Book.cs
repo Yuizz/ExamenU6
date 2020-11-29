@@ -19,11 +19,11 @@ namespace ExamenU6
             this.author = author;
             this.editorial = editorial;
         }*/
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public string Editorial { get; set; }
-        public Boolean Taken { get; set; }
-        public string OwnedBy { get; set; }
+        public string Title { get => title; set => title = value; }
+        public string Author { get => author; set => author = value; }
+        public string Editorial { get => editorial; set => editorial = value; }
+        public Boolean Taken { get => taken; set => taken = value; }
+        public string OwnedBy { get => ownedBy; set => ownedBy = value; }
         public string Status { 
             get {
                 if (this.taken == true) return "Prestado";

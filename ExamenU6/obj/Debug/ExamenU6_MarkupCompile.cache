@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-A:\Examenu6\ExamenU6\obj\Debug\
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\
 ExamenU6
 none
 false
 DEBUG;TRACE
-A:\Examenu6\ExamenU6\App.xaml
-11151548125
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\App.xaml
+2426358179
 
-71126086569
+9694683839
 13-1505183044
-MainWindow.xaml;
+AddUserWindow.xaml;MainWindow.xaml;
 
-True
+False
 
