@@ -1,9 +1,135 @@
-﻿<Application x:Class="ExamenU6.App"
+﻿<Application x:Class="Interfaz.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ExamenU6"
+             xmlns:local="clr-namespace:Interfaz"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <Color x:Key="DarkPrimaryColor">#303F9F</Color>
+            <Color x:Key="LightPrimaryColor">#C5CAE9</Color>
+            <Color x:Key="PrimaryColor">#3F51B5</Color>
+            <Color x:Key="TextIcons">#FFFFFF</Color>
+            <Color x:Key="AccentColor">#607D8B</Color>
+            <Color x:Key="PrimaryText">#212121</Color>
+            <Color x:Key="SecundaryText">#757575</Color>
+            <Color x:Key="DividerColor">#BDBDBD</Color>
+            <Color x:Key="AlertColor">#E91E63</Color>
+
+            <SolidColorBrush Color= "{StaticResource DarkPrimaryColor}" x:Key="BrushDarkPrimaryColor"/>
+            <SolidColorBrush Color= "{StaticResource LightPrimaryColor}" x:Key="BrushLightPrimaryColor"/>
+            <SolidColorBrush Color= "{StaticResource PrimaryColor}" x:Key="BrushPrimaryColor"/>
+            <SolidColorBrush Color= "{StaticResource TextIcons}" x:Key="BrushTextIcons"/>
+            <SolidColorBrush Color= "{StaticResource AccentColor}" x:Key="BrushAccentColor"/>
+            <SolidColorBrush Color= "{StaticResource PrimaryText}" x:Key="BrushPrimaryText"/>
+            <SolidColorBrush Color= "{StaticResource SecundaryText}" x:Key="BrushSecundaryText"/>
+            <SolidColorBrush Color= "{StaticResource DividerColor}" x:Key="BrushDividerColor"/>
+            <SolidColorBrush Color= "{StaticResource AlertColor}" x:Key="BrushAlertColor"/>
+
+            <Style TargetType="GridSplitter">
+                <Setter Property="Background" Value="{StaticResource BrushDividerColor}"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="Foreground" Value="{StaticResource BrushPrimaryText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Height" Value="24"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="100"/>
+            </Style>
+            <Style TargetType="Label" x:Key="LabelTitulo">
+                <Setter Property="Background" Value="{StaticResource BrushPrimaryColor}"/>
+                <Setter Property="Foreground" Value="{StaticResource BrushTextIcons}"/>
+                <Setter Property="FontStyle" Value="Italic"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+            <Viewbox x:Shared="false" x:Key="imgAvBook">
+                <Grid Width="48" Height="48" Visibility="Visible">
+                    <Path Data="M2.0199045,8.4282792L2.0199045,29.041915C2.0199049,29.569931,2.4759603,29.999923,3.0368736,29.999923L21.545931,29.999923C21.747959,29.999923,21.911899,29.853927,21.911899,29.674911L21.911899,9.2289963 4.6139901,9.2289963C3.6599922,9.2289963,2.7726505,8.9379025,2.0361285,8.4398263z M4.6139901,2.0369992C3.1929932,2.0369992 2.0369959,3.1929986 2.0369959,4.6139978 2.0369959,6.0359974 3.1929932,7.1919971 4.6139901,7.1919971L15.713911,7.1919971 15.713911,5.6329601 4.6019208,5.6329601C4.0389173,5.6329603 3.5829146,5.176971 3.5829148,4.613984 3.5829146,4.0509978 4.0389173,3.5960085 4.6019208,3.5960088L15.713911,3.5960088 17.713911,3.5959697 17.713911,7.1919971 20.083915,7.1919971 20.083915,2.0369992z M4.6139901,0L22.101951,0 22.101951,2.0369992 22.083915,2.0369992 22.083915,7.1919971 23.929947,7.1919971 23.929947,9.2289963 23.911901,9.2289963 23.911901,29.674911C23.911901,30.956893,22.850986,31.999923,21.545931,31.999923L3.0368736,31.999923C1.3729314,31.999923,0.01990226,30.672897,0.019902182,29.041915L0.019902182,5.0332297 0.0060157636,4.8511513C0.0020218436,4.7725966 3.632158E-07,4.6935292 0,4.6139978 3.632158E-07,2.0699992 2.0699956,0 4.6139901,0z" Stretch="Uniform" 
+                          Fill="{StaticResource TextIcons}" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <TransformGroup.Children>
+                                    <RotateTransform Angle="0" />
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </TransformGroup.Children>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                </Grid>
+            </Viewbox>
+            <Viewbox x:Shared="false" x:Key="imgAddUser">
+                <Grid Width="48" Height="48" Visibility="Visible">
+                    <Path Data="M26.199951,12.300006L28.399963,12.300006 28.399963,15.899998 32,15.899998 32,18.000004 28.399963,18.000004 28.399963,21.600012 26.199951,21.600012 26.199951,18.000004 22.599976,18.000004 
+                          22.599976,15.800007 26.199951,15.800007z M14.799988,0C18.599976,-7.6615834E-08 21.699951,3.8000038 21.699951,8.6000081 21.699951,12.500003 19.699951,15.399998 17,16.800007 16.599976,16.899998 
+                          16,17.399998 16,18.000004 16,18.500004 16.599976,19.000004 16.899963,19.10001 22.599976,21.100012 27.5,23.9 29.5,29.400002L0,29.400002C2,23.800009 6.8999634,21.300009 12.599976,19.10001 12.899963
+                          ,19.000004 13.399963,18.500004 13.399963,18.000004 13.399963,17.500004 12.899963,17.000004 12.599976,16.899998 9.7999878,15.399998 7.8999634,12.600009 7.8999634,8.6000081 7.7999878,3.8000038 10.899963,-7.6615834E-08 14.799988,0z" Stretch="Uniform" 
+                          Fill="{StaticResource TextIcons}" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <TransformGroup.Children>
+                                    <RotateTransform Angle="0" />
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </TransformGroup.Children>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                </Grid>
+            </Viewbox>
+            <Viewbox x:Shared="false" x:Key="imgReturnBook">
+                <Grid Width="48" Height="48" Visibility="Visible">
+                    <Path Data="M7.5239427,4.4000008C5.7329547,4.4010003 4.3949659,5.1760018 3.4339731,6.017997 2.7359786,6.6320031 2.270982,7.2750008 2.0619841,7.5959995L2.0619841,20.596998C3.2619753,19.530996,5.0979593,18.455999,7.5199411,18.455999L7.5239427,18.455999C9.9889195,18.455999,11.865908,19.566,13.088898,20.645002L13.088898,7.6070011C13.035897,7.5269992 12.964898,7.4270008 12.8789,7.3120029 12.631901,6.9869988 12.255904,6.543998 11.764907,6.108001 10.775916,5.2310021 9.3709242,4.4000008 7.5239427,4.4000008z M7.5239427,2.3390038C10.018922,2.339004 11.912908,3.4770045 13.134895,4.5680001 13.517895,4.9090035 13.841891,5.2480004 14.105888,5.5540001 14.360887,5.2499993 14.672885,4.9140008 15.043881,4.5760033 16.074875,3.6320033 17.610861,2.6590037 19.609846,2.4059975 19.222849,3.1230006 18.965851,3.8909984 18.833851,4.6770012 17.897858,4.9759972 17.132864,5.4820015 16.522869,6.017997 15.823877,6.6330025 15.35888,7.2760003 15.149883,7.5969989L15.149883,20.597997C16.350872,19.531996 18.187857,18.454 20.612837,18.455999 23.076819,18.455999 24.954806,19.565 26.177796,20.645002L26.177796,13.272002C26.873789,13.263999,27.567784,13.159003,28.239779,12.955001L28.239779,23.423002 26.316794,23.933996 26.315794,23.933996 26.314791,23.933996C26.289793,23.894003 26.268795,23.860998 26.239796,23.816 26.180794,23.727003 26.090794,23.593 25.966795,23.429998 25.719799,23.103002 25.344801,22.660002 24.853804,22.223997 23.86281,21.346998 22.459822,20.516996 20.612837,20.516996 18.820851,20.517996 17.482865,21.292997 16.522869,22.134001 15.581878,22.961996 15.06488,23.842001 15.025883,23.913L15.024884,23.913999 15.023884,23.917997C14.848882,24.236997 14.509884,24.454 14.120887,24.454 13.73789,24.454 13.404893,24.244001 13.226897,23.933996 13.201896,23.894003 13.180896,23.860998 13.151897,23.816 13.092896,23.727003 13.001896,23.593 12.8789,23.429998 12.631901,23.103002 12.255904,22.660002 11.764907,22.223997 10.775916,21.346998 9.3709242,20.516996 7.5239427,20.516996 5.7329547,20.517996 4.3949659,21.292997 3.4339731,22.134001 2.47998,22.972997 1.9619844,23.866003 1.9349841,23.917997L1.9309844,23.914999 0,23.423002 0,7.3059986 0.12599848,6.8130028C0.16299883,6.7489998 0.7499941,5.6770012 1.9549845,4.5760033 3.1529751,3.4800029 5.0279605,2.337997 7.5239427,2.3390038z M26.211796,1.7470015C25.631798,1.7470014,25.159802,2.2170026,25.159802,2.7990029L25.159802,4.8779976 23.000818,4.8779976C22.418822,4.8779976 21.947829,5.3489983 21.947829,5.9290001 21.947829,6.509002 22.418822,6.9800026 23.000818,6.9800026L25.159802,6.9800026 25.159802,9.0190036C25.159802,9.6009967 25.631798,10.069999 26.211796,10.069999 26.790789,10.069999 27.260786,9.6009967 27.260786,9.0190036L27.260786,6.9800026 29.222769,6.9800026C29.800764,6.9800026 30.270762,6.509002 30.270762,5.9290001 30.270762,5.3489983 29.800764,4.8779976 29.222769,4.8779976L27.260786,4.8779976 27.260786,2.7990029C27.260786,2.2170026,26.790789,1.7470014,26.211796,1.7470015z M26.091793,0C27.603783,-8.3652139E-08 29.115772,0.57600385 30.269762,1.7290038 32.576744,4.0380013 32.576744,7.7789981 30.269762,10.085997 27.962782,12.394004 24.22181,12.394004 21.913828,10.085997 19.605845,7.7789981 19.605845,4.0380013 21.913828,1.7290038 23.06782,0.57600385 24.579808,-8.3652139E-08 26.091793,0z" Stretch="Uniform" 
+                          Fill="{StaticResource TextIcons}" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <TransformGroup.Children>
+                                    <RotateTransform Angle="0" />
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </TransformGroup.Children>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                </Grid>
+            </Viewbox>
+            <Viewbox x:Shared="false" x:Key="imgTakeBook">
+                <Grid Width="48" Height="48" Visibility="Visible">
+                    <Path Data="M6.9799973,4.9119947C5.3190013,4.9130018 4.0769969,5.6319959 3.1859981,6.4130018 2.5380026,6.9819944 2.1070029,7.5789945 1.9130024,7.8769987L1.9130024,19.934997C3.0260018,18.946998,4.7299968,17.948997,6.975,17.948997L6.9799973,17.948997C9.2660009,17.948997,11.007999,18.979995,12.142001,19.981994L12.142001,7.8870008C12.093005,7.8119962 12.027003,7.720001 11.947002,7.6139982 11.718005,7.3109968 11.368999,6.9010007 10.914004,6.4959943 9.9949971,5.681999 8.6930028,4.9119947 6.9799973,4.9119947z M23.668005,4.4619977C23.106001,4.4619977 22.650007,4.9169996 22.650007,5.4809949 22.650007,6.0419996 23.106001,6.4999998 23.668005,6.4999998L29.622009,6.4999998C30.184006,6.4999998 30.641007,6.0419996 30.641007,5.4809949 30.641007,4.9169996 30.184006,4.4619977 29.622009,4.4619977z M6.9799973,3.000999C9.2940007,2.9999998 11.050998,4.0559995 12.185001,5.069 12.540004,5.3839948 12.839999,5.6989973 13.085002,5.9830015 13.322002,5.7009962 13.612002,5.3889997 13.955005,5.0749967 15.066006,4.0579984 16.805004,2.9990003 19.121006,3.000999 19.416004,3.0009992 19.702,3.0179975 19.979,3.0509944 19.758,3.6619947 19.619999,4.2959974 19.571003,4.9369962 19.424,4.9249952 19.275005,4.9119947 19.121006,4.9119947 17.460003,4.9130018 16.216999,5.6319959 15.327,6.4130018 14.679005,6.9819944 14.248004,7.5800016 14.054004,7.8769987L14.054004,19.937996C15.167004,18.947998 16.872006,17.947998 19.121006,17.948997 21.407004,17.948997 23.149008,18.978996 24.284002,19.979995L24.284002,12.169998C24.904005,12.388,25.547003,12.518997,26.196005,12.558998L26.196005,22.556999 24.412001,23.031997 24.411001,23.031997 24.410002,23.031997C24.387007,22.994995 24.368002,22.963997 24.341002,22.921997 24.287001,22.839996 24.202002,22.715996 24.088003,22.562996 23.858008,22.261001 23.510008,21.850998 23.056006,21.445999 22.136007,20.631996 20.834005,19.861999 19.121006,19.861 17.460003,19.861999 16.216999,20.582 15.327,21.361999 14.454005,22.129997 13.975001,22.946998 13.937999,23.013L13.936999,23.016998C13.775005,23.311996 13.460002,23.514 13.098003,23.514 12.742999,23.514 12.435001,23.319 12.27,23.031997L12.269,23.031997C12.246005,22.994995 12.227,22.963997 12.2,22.921997 12.145999,22.839996 12.061,22.715996 11.947002,22.562996 11.718005,22.261001 11.368999,21.850998 10.914004,21.445999 9.9949971,20.631996 8.6930028,19.861999 6.9799973,19.861 5.3190013,19.861999 4.0769969,20.582 3.1859981,21.361999 2.3020026,22.139999 1.8200002,22.969002 1.795998,23.016998L1.7920002,23.014999 0,22.556999 0,7.6080015 0.11799623,7.1500013C0.15200046,7.091995 0.69599933,6.0969999 1.8139957,5.0749967 2.924996,4.0579984 4.6640025,2.9990003 6.9799973,3.000999z M26.520002,8.5265128E-14C27.923002,-2.367499E-07 29.325005,0.5349958 30.395004,1.6049955 32.535006,3.7459943 32.535006,7.2149961 30.395004,9.3559949 28.255003,11.495994 24.785002,11.495994 22.645002,9.3559949 20.504002,7.2149961 20.504002,3.7459943 22.645002,1.6049955 23.715002,0.5349958 25.117003,-2.367499E-07 26.520002,8.5265128E-14z" Stretch="Uniform" 
+                          Fill="{StaticResource TextIcons}" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <TransformGroup.Children>
+                                    <RotateTransform Angle="0" />
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </TransformGroup.Children>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                </Grid>
+            </Viewbox>
+
+            <Style TargetType="Button" x:Key="btnSimple">
+                <Setter Property="Background" Value="{StaticResource BrushAccentColor}"/>
+                <Setter Property="Foreground" Value="{StaticResource BrushTextIcons}"/>
+                <Setter Property="Height" Value="28"/>
+                <Setter Property="Width" Value="90"/>
+                <Setter Property="Margin" Value="2,4"/>
+            </Style>
+
+            <Style TargetType="Button" x:Key="btnAgregar" BasedOn="{StaticResource btnSimple}">
+                <Setter Property="Content" Value="{StaticResource imgAddUser}"/>
+            </Style>
+            <Style TargetType="Button" x:Key="btnDisponible" BasedOn="{StaticResource btnSimple}">
+                <Setter Property="Content" Value="{StaticResource imgAvBook}"/>
+            </Style>
+            <Style TargetType="Button" x:Key="btnPedir" BasedOn="{StaticResource btnSimple}">
+                <Setter Property="Content" Value="{StaticResource imgTakeBook}"/>
+            </Style>
+            <Style TargetType="Button" x:Key="btnDevolver" BasedOn="{StaticResource btnSimple}">
+                <Setter Property="Content" Value="{StaticResource imgReturnBook}"/>
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
