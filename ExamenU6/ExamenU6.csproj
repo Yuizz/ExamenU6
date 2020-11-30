@@ -103,7 +103,16 @@
     <Resource Include="imag\home.png" />
     <Resource Include="imag\producto.png" />
     <Resource Include="imag\ventas.png" />
-    <Resource Include="imag\usuario.png" />
+    <Resource Include="imag\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imag\libDisp.png" />
+    <Resource Include="imag\devLibro.png" />
+    <Resource Include="imag\tomarLibro.png" />
+    <Resource Include="imag\agregarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imag\usuarios.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

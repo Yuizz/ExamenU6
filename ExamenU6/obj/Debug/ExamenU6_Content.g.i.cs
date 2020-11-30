@@ -8,9 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/home.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/product%20box%20-01-wf.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/sale.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/users-wf.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/user%20-%2006.png")]
 
 

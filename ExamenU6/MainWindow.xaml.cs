@@ -53,5 +53,25 @@ namespace ExamenU6
         {
 
         }
+
+        private void menulibDisp_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menudevLibro_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menutomarLibro_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuagregarUsuario_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
