@@ -39,5 +39,45 @@ namespace ExamenU6
         {
             
         }
+
+        private void menuProductos_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuUsuarios_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuVentas_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuHome_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menulibDisp_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menudevLibro_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menutomarLibro_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuagregarUsuario_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
