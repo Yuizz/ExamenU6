@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenU6"
         mc:Ignorable="d"
-        Title="Añadir usuario" Height="350" Width="352" ResizeMode="NoResize">
+        Title="Añadir usuario" Height="330" Width="352" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" FontFamily="Times New Roman" FontSize="24" Margin="10" HorizontalAlignment="Center">Añadir usuario</Label>
+        <StackPanel Background="{StaticResource BrushPrimaryColor}">
+        <Label Grid.Row="0" FontFamily="Times New Roman" FontSize="24" Margin="10" HorizontalAlignment="Center" Style="{StaticResource LabelTitulo}">Añadir usuario</Label>
+        </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -21,7 +23,7 @@
             <StackPanel Margin="10, 0" Grid.Column="0">
                 <TextBlock Margin="0, 5" FontSize="14">Nombre:</TextBlock>
                 <TextBlock Margin="0, 5" FontSize="14">Dirección: </TextBlock>
-                <Button x:Name="TarjetaRFID" Margin="5,5" FontSize="14" Click="TarjetaRFID_Click">Tarjeta RFID</Button>
+                <Button x:Name="TarjetaRFID" Margin="5, 12, 5, 5" FontSize="14" Click="TarjetaRFID_Click" Style="{StaticResource btnSimple}" Width="auto" Height="auto">Tarjeta RFID</Button>
                 <TextBlock Margin="0,5" FontSize="14">Usuario:</TextBlock>
                 <TextBlock Name="Dato4" Margin="0,17" FontSize="14" Text=""></TextBlock>
             </StackPanel>
@@ -35,8 +37,8 @@
             </StackPanel>
         </Grid>
         <WrapPanel Grid.Row="2" Margin="0,5" HorizontalAlignment="Center">
-            <Button Name="Guardar" Margin="5,5" Content="  Guardar  " RenderSize="50,100" FontSize="14" Click="Guardar_Click"/>
-            <Button Name="Cancelar" Margin="5,5" Content="  Cancelar  " FontSize="14" Click="Cancelar_Click"/>
+            <Button Name="Guardar" Margin="5,5" Content="  Guardar  " RenderSize="50,100" FontSize="14" Click="Guardar_Click" Style="{StaticResource btnGuardar}"/>
+            <Button Name="Cancelar" Margin="5,5" Content="  Cancelar  " FontSize="14" Click="Cancelar_Click" Style="{StaticResource btnCancelar}"/>
         </WrapPanel>
     </Grid>
 </Window>

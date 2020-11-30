@@ -31,3 +31,10 @@ A:\Examenu6\ExamenU6\obj\Debug\ExamenU6.Properties.Resources.resources
 A:\Examenu6\ExamenU6\obj\Debug\ExamenU6.csproj.GenerateResource.cache
 A:\Examenu6\ExamenU6\obj\Debug\ExamenU6.csproj.CoreCompileInputs.cache
 A:\Examenu6\ExamenU6\obj\Debug\ExamenU6.csproj.CopyComplete
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\AddUserWindow.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\bin\Debug\HamburgerMenu.dll
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\EditUserWindow.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\App.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\AddUserWindow.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\EditUserWindow.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.csproj.CopyComplete
