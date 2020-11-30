@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using ExamenU6.Modulos;
 
 namespace ExamenU6
 {
@@ -75,6 +76,7 @@ namespace ExamenU6
                 Usuarios[user].Address = this.address;
                 Usuarios[user].Rfid = this.rfid;
                 MessageBox.Show($"Usuario {Usuarios[user].Name} editado.", "Editar usuario", MessageBoxButton.OK, MessageBoxImage.Information);
+                Arduino.closePort();
                 this.Close();
             }
             else
@@ -84,6 +86,7 @@ namespace ExamenU6
         }
         private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
+            Arduino.closePort();
             this.Close();
         }
         void EditUserWindow_Closing(object sender, CancelEventArgs e)

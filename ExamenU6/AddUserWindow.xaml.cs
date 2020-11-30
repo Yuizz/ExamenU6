@@ -101,6 +101,7 @@ namespace ExamenU6
                         Usuarios.Add(new Teacher(this.name, this.address, this.rfid, this.dato4));
                     }
                     MessageBox.Show($"Usuario {this.name} añadido.", "Añadir usuario", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Arduino.closePort();
                     this.Close();
                 }
                 else
@@ -116,6 +117,7 @@ namespace ExamenU6
 
         private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
+            Arduino.closePort();
             this.Close();
         }
         void AddUserWindow_Closing(object sender, CancelEventArgs e)

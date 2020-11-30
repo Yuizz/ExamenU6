@@ -22,14 +22,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Background="{StaticResource BrushPrimaryColor}">
                 <Label Content="Libreria" Style="{StaticResource LabelTitulo}"/>
             </StackPanel>
-            <StackPanel Grid.Row="2">
-                <Label x:Name="lblUsuario"/>
-            </StackPanel>
+            <ScrollViewer Grid.Row="1" Name="Contenedor" />
         </Grid>
     </Grid>
 </Window>

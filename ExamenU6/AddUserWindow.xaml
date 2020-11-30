@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenU6"
         mc:Ignorable="d"
-        Title="Añadir usuario" Height="330" Width="352" ResizeMode="NoResize">
+        Title="Añadir usuario" Height="330" Width="370" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -28,12 +28,12 @@
                 <TextBlock Name="Dato4" Margin="0,17" FontSize="14" Text=""></TextBlock>
             </StackPanel>
             <StackPanel Margin="10, 0" Grid.Column="1">
-                <TextBox Name="nombre" Margin="0,5" FontSize="14" TextChanged="nombre_TextChanged"/>
-                <TextBox Name="direccion" Margin="0,5" FontSize="14" TextChanged="direccion_TextChanged"/>
-                <TextBox Name="RFID" Margin="0,2,0,5" FontSize="14" IsReadOnly="True"/>
+                <TextBox Name="nombre" Width="153" Margin="0,5" FontSize="14" TextChanged="nombre_TextChanged"/>
+                <TextBox Name="direccion" Width="153" Margin="0,5" FontSize="14" TextChanged="direccion_TextChanged"/>
+                <TextBox Name="RFID" Width="153" Margin="0,2,0,5" FontSize="14" IsReadOnly="True"/>
                 <RadioButton Name="btnStudent" Margin="0,5,0,1" Content="Estudiante" Click="btnStudent_Click"></RadioButton>
                 <RadioButton Name="btnTeacher" Margin="0,1,0,5" Content="Docente" Click="btnTeacher_Click"></RadioButton>
-                <TextBox Name="boxDato4" Margin="0,5, 0,5" FontSize="14" TextChanged="boxDato4_TextChanged" Visibility="Hidden"/>
+                <TextBox Name="boxDato4" Width="153" Margin="0,5, 0,5" FontSize="14" TextChanged="boxDato4_TextChanged" Visibility="Hidden"/>
             </StackPanel>
         </Grid>
         <WrapPanel Grid.Row="2" Margin="0,5" HorizontalAlignment="Center">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamenU6.Modulos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,55 +30,32 @@ namespace ExamenU6
             Books.Add(new Book() { Title = "El juego de ender", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
             Books.Add(new Book() { Title = "Harry Potter", Author = "JK Rowling", Editorial = "Salamandra", Taken = true, OwnedBy = "Jugo" });
             Users.Add(new Student("Jugo", "Tangamandapio", " 0C 74 56 08", "17260671"));
-            EditUserWindow AddUser = new EditUserWindow(Users,0);
-            AddUser.Show();
+            Users.Add(new Teacher("Julian Gonzalez", "Cima 2", " 0C 68 56 08", "Metal mecánica"));
         }
-        public static void ReceiveList(List<User> Usrs)
-        {
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void menuProductos_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+       
         private void menuUsuarios_Selected(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void menuVentas_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void menuHome_Selected(object sender, RoutedEventArgs e)
-        {
-
+            MostrarContenido(new UsuariosUserControl(Users));
         }
 
         private void menulibDisp_Selected(object sender, RoutedEventArgs e)
         {
-
+            MostrarContenido(null);
         }
 
         private void menudevLibro_Selected(object sender, RoutedEventArgs e)
         {
-
+            MostrarContenido(null);
         }
 
         private void menutomarLibro_Selected(object sender, RoutedEventArgs e)
         {
-
+            MostrarContenido(null);
         }
-
-        private void menuagregarUsuario_Selected(object sender, RoutedEventArgs e)
+        private void MostrarContenido(UserControl Control)
         {
-
+            Contenedor.Content = null;
+            Contenedor.Content = Control;
         }
     }
 }

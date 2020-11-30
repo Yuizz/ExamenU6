@@ -26,9 +26,9 @@
                 <Button x:Name="TarjetaRFID" Margin="5,13, 5,5" FontSize="14" Click="TarjetaRFID_Click" Style="{StaticResource btnAgregar}" Width="auto" Height="auto">Tarjeta RFID</Button>
             </StackPanel>
             <StackPanel Margin="10, 0" Grid.Column="1">
-                <TextBox Name="nombre" Margin="0,5" FontSize="14" TextChanged="nombre_TextChanged"/>
-                <TextBox Name="direccion" Margin="0,5" FontSize="14" TextChanged="direccion_TextChanged"/>
-                <TextBox Name="RFID" Margin="0,2,0,5" FontSize="14" IsReadOnly="True"/>
+                <TextBox Name="nombre" Width="153" Margin="0,5" FontSize="14" TextChanged="nombre_TextChanged"/>
+                <TextBox Name="direccion" Width="153" Margin="0,5" FontSize="14" TextChanged="direccion_TextChanged"/>
+                <TextBox Name="RFID" Width="153" Margin="0,2,0,5" FontSize="14" IsReadOnly="True"/>
             </StackPanel>
         </Grid>
         <WrapPanel Grid.Row="2" Margin="0,5" HorizontalAlignment="Center">
