@@ -17,6 +17,8 @@
             <menu:HamburgerMenuItem Text="Libros Disponibles" x:Name="menulibDisp" Icon="imag/libDisp.png" Selected="menulibDisp_Selected"/>
             <menu:HamburgerMenuItem Text="Pedir Libro" x:Name="menutomarLibro" Icon="imag/tomarLibro.png" Selected="menutomarLibro_Selected"/>
             <menu:HamburgerMenuItem Text="Devolver Libro" x:Name="menudevLibro" Icon="imag/devLibro.png" Selected="menudevLibro_Selected"/>
+            <menu:HamburgerMenuItem Text="Actualizar" x:Name="menuActualizar" Icon="imag/actualizar.png" Selected="menuActualizar_Selected"/>
+
         </menu:HamburgerMenu>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>

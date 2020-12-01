@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/libreriaicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/refresh-wf.png")]
 
 

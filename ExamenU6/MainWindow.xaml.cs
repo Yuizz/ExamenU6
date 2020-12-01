@@ -57,5 +57,15 @@ namespace ExamenU6
             Contenedor.Content = null;
             Contenedor.Content = Control;
         }
+
+        private void menueditUsuario_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuActualizar_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

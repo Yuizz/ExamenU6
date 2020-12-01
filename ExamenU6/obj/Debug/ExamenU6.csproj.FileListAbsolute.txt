@@ -40,3 +40,9 @@ C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\
 C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.csproj.CopyComplete
 C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Modulos\UsuariosUserControl.g.cs
 C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Modulos\UsuariosUserControl.baml
+A:\Examenu6\ExamenU6\obj\Debug\AddUserWindow.g.cs
+A:\Examenu6\ExamenU6\obj\Debug\EditUserWindow.g.cs
+A:\Examenu6\ExamenU6\obj\Debug\Modulos\UsuariosUserControl.g.cs
+A:\Examenu6\ExamenU6\obj\Debug\AddUserWindow.baml
+A:\Examenu6\ExamenU6\obj\Debug\EditUserWindow.baml
+A:\Examenu6\ExamenU6\obj\Debug\Modulos\UsuariosUserControl.baml

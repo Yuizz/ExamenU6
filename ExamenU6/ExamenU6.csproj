@@ -140,5 +140,11 @@
   <ItemGroup>
     <Resource Include="imag\libreriaIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imag\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imag\actualizar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
