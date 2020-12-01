@@ -25,7 +25,7 @@ namespace ExamenU6.Modulos
         {
             InitializeComponent();
             this.Usuarios = Users;
-            listUsuarios.ItemsSource = Users;
+            listUsuarios.ItemsSource = this.Usuarios;
         }
         private void addUser_Click(object sender, RoutedEventArgs e)
         {
@@ -45,6 +45,12 @@ namespace ExamenU6.Modulos
             {
                 MessageBox.Show("Selecciona un usuario primero", "Usuarios", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+        }
+
+        private void updateList_Click(object sender, RoutedEventArgs e)
+        {
+            listUsuarios.ItemsSource = null;
+            listUsuarios.ItemsSource = this.Usuarios;
         }
     }
 }

@@ -13,8 +13,9 @@
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0">
             <Label Style="{StaticResource LabelTitulo}" Content="  Usuarios  "></Label>
-            <Button Name="addUser" Style="{StaticResource btnAgregar}" Click="addUser_Click"></Button>
-            <Button Name="editUser" Style="{StaticResource btnEditar}" Click="editUser_Click"></Button>
+            <Button Name="addUser" Style="{StaticResource btnAgregar}" Click="addUser_Click"/>
+            <Button Name="editUser" Style="{StaticResource btnEditar}" Click="editUser_Click"/>
+            <Button Name="updateList" Style="{StaticResource btnActualizar}" Click="updateList_Click"/>
         </WrapPanel>
         <Grid Grid.Row="1" Background="{StaticResource BrushPrimaryColor}" Margin="0" >
             <ListView Margin="5" Name="listUsuarios">

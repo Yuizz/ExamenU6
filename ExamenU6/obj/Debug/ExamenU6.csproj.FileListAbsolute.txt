@@ -46,3 +46,9 @@ A:\Examenu6\ExamenU6\obj\Debug\Modulos\UsuariosUserControl.g.cs
 A:\Examenu6\ExamenU6\obj\Debug\AddUserWindow.baml
 A:\Examenu6\ExamenU6\obj\Debug\EditUserWindow.baml
 A:\Examenu6\ExamenU6\obj\Debug\Modulos\UsuariosUserControl.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\LendBookWindow.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Modulos\LibrosUserControl.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Ventanas\ReturnBookWindow.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\LendBookWindow.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Modulos\LibrosUserControl.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Ventanas\ReturnBookWindow.baml

@@ -57,5 +57,11 @@ namespace ExamenU6.Modulos
             ReturnBookWindow returnBook = new ReturnBookWindow(Usuarios, Libros);
             returnBook.Show();
         }
+
+        private void updateList_Click(object sender, RoutedEventArgs e)
+        {
+            listLibros.ItemsSource = null; 
+            listLibros.ItemsSource = this.Libros;
+        }
     }
 }

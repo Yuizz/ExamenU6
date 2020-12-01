@@ -42,30 +42,10 @@ namespace ExamenU6
         {
             MostrarContenido(new LibrosUserControl(Books, Users));
         }
-
-        private void menudevLibro_Selected(object sender, RoutedEventArgs e)
-        {
-            MostrarContenido(null);
-        }
-
-        private void menutomarLibro_Selected(object sender, RoutedEventArgs e)
-        {
-            MostrarContenido(null);
-        }
         private void MostrarContenido(UserControl Control)
         {
             Contenedor.Content = null;
             Contenedor.Content = Control;
-        }
-
-        private void menueditUsuario_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void menuActualizar_Selected(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

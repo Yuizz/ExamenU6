@@ -15,6 +15,7 @@
             <Label Style="{StaticResource LabelTitulo}" Content="      Libros      "></Label>
             <Button Name="lendBook" Style="{StaticResource btnPedir}" Click="lendBook_Click"/>
             <Button Name="returnBook" Style="{StaticResource btnDevolver}" Click="returnBook_Click"/>
+            <Button Name="updateList" Style="{StaticResource btnActualizar}" Click="updateList_Click"/>
         </WrapPanel>
         <Grid Grid.Row="1" Background="{StaticResource BrushPrimaryColor}" Margin="0" >
             <ListView Margin="5" Name="listLibros">
