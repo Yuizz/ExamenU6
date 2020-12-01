@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:ExamenU6"
         xmlns:menu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Librería" Icon="imag/libreriaIcon.png" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <menu:HamburgerMenu Grid.Column="0" Background="{StaticResource BrushPrimaryColor}" MenuItemForeground="{StaticResource BrushPrimaryColor}" MenuIconColor="{StaticResource BrushTextIcons}" SelectionIndicatorColor="{StaticResource BrushAccentColor}">
+        <menu:HamburgerMenu Grid.Column="0" Background="{StaticResource BrushPrimaryColor}" MenuItemForeground="{StaticResource BrushTextIcons}" MenuIconColor="{StaticResource BrushTextIcons}" SelectionIndicatorColor="{StaticResource BrushAccentColor}">
             <menu:HamburgerMenuItem Text="Usuarios" x:Name="menuUsuarios" Icon="imag/usuarios.png" Selected="menuUsuarios_Selected"/>
             <menu:HamburgerMenuItem Text="Libros Disponibles" x:Name="menulibDisp" Icon="imag/libDisp.png" Selected="menulibDisp_Selected"/>
             <menu:HamburgerMenuItem Text="Pedir Libro" x:Name="menutomarLibro" Icon="imag/tomarLibro.png" Selected="menutomarLibro_Selected"/>

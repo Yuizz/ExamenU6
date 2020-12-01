@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenU6"
         mc:Ignorable="d"
-        Title="Añadir usuario" Height="330" Width="370" ResizeMode="NoResize">
+        Title="Añadir usuario" Icon="imag/agregarUsuario.png" Height="330" Width="370" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

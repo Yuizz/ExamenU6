@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/user%20-%2006.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imag/libreriaicon.png")]
 
 
