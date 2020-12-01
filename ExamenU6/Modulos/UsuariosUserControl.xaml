@@ -14,7 +14,7 @@
         <WrapPanel Grid.Row="0">
             <Label Style="{StaticResource LabelTitulo}" Content="  Usuarios  "></Label>
             <Button Name="addUser" Style="{StaticResource btnAgregar}" Click="addUser_Click"></Button>
-            <Button Name="editUser" Style="{StaticResource btnSimple}" Click="editUser_Click">Editar</Button>
+            <Button Name="editUser" Style="{StaticResource btnEditar}" Click="editUser_Click"></Button>
         </WrapPanel>
         <Grid Grid.Row="1" Background="{StaticResource BrushPrimaryColor}" Margin="0" >
             <ListView Margin="5" Name="listUsuarios">
