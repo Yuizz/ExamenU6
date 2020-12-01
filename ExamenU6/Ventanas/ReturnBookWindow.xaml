@@ -1,0 +1,43 @@
+﻿<Window x:Class="ExamenU6.Ventanas.ReturnBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamenU6.Ventanas"
+        mc:Ignorable="d"
+        Title="Devolver Libro" Height="450" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="{StaticResource BrushPrimaryColor}">
+            <Label Content="Devolver libros" FontSize="24" FontFamily="Times New Roman" HorizontalContentAlignment="Center" Style="{StaticResource LabelTitulo}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBox Name="RFIDBox" FontSize="14" IsReadOnly="True" Margin="20,10" Width="auto" HorizontalContentAlignment="Center"></TextBox>
+            <Button Name="scanCard" Margin="40,0" FontSize="14" Click="scanCard_Click" Style="{StaticResource btnSimple}" Width="auto">Escanear tarjeta</Button>
+        </StackPanel>
+        <Grid Grid.Row="2" Background="{StaticResource BrushPrimaryColor}" Margin="0" >
+            <ListView Margin="5" Name="listLibros">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Título" Width="auto" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="Autor" Width="auto" DisplayMemberBinding="{Binding Author}"/>
+                        <GridViewColumn Header="Editorial" Width="auto" DisplayMemberBinding="{Binding Editorial}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <Grid Grid.Row="3" Margin="10,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="devolverLibro" Content="  Devolver libro  " Margin="10,0" Click="devolverLibro_Click" Style="{StaticResource btnGuardar}"/>
+            <Button Grid.Column="1" Name="cancelar" Content="  Cancelar  " Margin="10,0" Click="cancelar_Click" Style="{StaticResource btnCancelar}"/>
+        </Grid>
+    </Grid>
+</Window>

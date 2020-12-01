@@ -25,7 +25,7 @@ namespace ExamenU6.Modulos
         {
             InitializeComponent();
             this.Usuarios = Users;
-            listUsuarios.ItemsSource = this.Usuarios;
+            listUsuarios.ItemsSource = Users;
         }
         private void addUser_Click(object sender, RoutedEventArgs e)
         {
@@ -36,8 +36,15 @@ namespace ExamenU6.Modulos
         private void editUser_Click(object sender, RoutedEventArgs e)
         {
             int selectedUser = listUsuarios.SelectedIndex;
-            EditUserWindow EditUser = new EditUserWindow(Usuarios, selectedUser);
-            EditUser.Show();
+            if (selectedUser != -1)
+            {
+                EditUserWindow EditUser = new EditUserWindow(Usuarios, selectedUser);
+                EditUser.Show();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un usuario primero", "Usuarios", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

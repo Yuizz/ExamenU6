@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamenU6
 {
-    class Book
+    public class Book
     {
         private string title;
         private string author;
@@ -27,7 +27,7 @@ namespace ExamenU6
         public string Status { 
             get {
                 if (this.taken == true) return "Prestado";
-                else return "";
+                else return "En biblioteca";
             }
             set { this.editorial = value; }
         }

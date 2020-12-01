@@ -14,7 +14,7 @@
         </Grid.ColumnDefinitions>
         <menu:HamburgerMenu Grid.Column="0" Background="{StaticResource BrushPrimaryColor}" MenuItemForeground="{StaticResource BrushTextIcons}" MenuIconColor="{StaticResource BrushTextIcons}" SelectionIndicatorColor="{StaticResource BrushAccentColor}">
             <menu:HamburgerMenuItem Text="Usuarios" x:Name="menuUsuarios" Icon="imag/usuarios.png" Selected="menuUsuarios_Selected"/>
-            <menu:HamburgerMenuItem Text="Libros Disponibles" x:Name="menulibDisp" Icon="imag/libDisp.png" Selected="menulibDisp_Selected"/>
+            <menu:HamburgerMenuItem Text="Libros" x:Name="menuLibros" Icon="imag/libDisp.png" Selected="menuLibros_Selected"/>
             <menu:HamburgerMenuItem Text="Pedir Libro" x:Name="menutomarLibro" Icon="imag/tomarLibro.png" Selected="menutomarLibro_Selected"/>
             <menu:HamburgerMenuItem Text="Devolver Libro" x:Name="menudevLibro" Icon="imag/devLibro.png" Selected="menudevLibro_Selected"/>
         </menu:HamburgerMenu>

@@ -40,3 +40,9 @@ C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\
 C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\ExamenU6.csproj.CopyComplete
 C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Modulos\UsuariosUserControl.g.cs
 C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Modulos\UsuariosUserControl.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\LendBookWindow.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Modulos\LibrosUserControl.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\LendBookWindow.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Modulos\LibrosUserControl.baml
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Ventanas\ReturnBookWindow.g.cs
+C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\obj\Debug\Ventanas\ReturnBookWindow.baml

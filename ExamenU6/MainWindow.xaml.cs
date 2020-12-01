@@ -38,9 +38,9 @@ namespace ExamenU6
             MostrarContenido(new UsuariosUserControl(Users));
         }
 
-        private void menulibDisp_Selected(object sender, RoutedEventArgs e)
+        private void menuLibros_Selected(object sender, RoutedEventArgs e)
         {
-            MostrarContenido(null);
+            MostrarContenido(new LibrosUserControl(Books, Users));
         }
 
         private void menudevLibro_Selected(object sender, RoutedEventArgs e)
