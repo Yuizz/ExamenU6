@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ExamenU6"
         xmlns:menu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
         mc:Ignorable="d"
-        Title="Librería" Icon="imag/libreriaIcon.png" Height="450" Width="800">
+        Title="Biblioteca" Icon="imag/libreriaIcon.png" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>

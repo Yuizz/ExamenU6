@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Julian Gonzalez\OneDrive\Documentos\Programación\CS\ExamenU6\ExamenU6\App.xaml
-7-713359944
+71829050728
 
-151718772820
+15926731167
 14916752504
-AddUserWindow.xaml;EditUserWindow.xaml;LendBookWindow.xaml;MainWindow.xaml;Modulos\LibrosUserControl.xaml;Modulos\UsuariosUserControl.xaml;Ventanas\ReturnBookWindow.xaml;
+Ventanas\AddUserWindow.xaml;Ventanas\EditUserWindow.xaml;Ventanas\LendBookWindow.xaml;MainWindow.xaml;Modulos\LibrosUserControl.xaml;Modulos\UsuariosUserControl.xaml;Ventanas\ReturnBookWindow.xaml;
 
 True
 

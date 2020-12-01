@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenU6"
         mc:Ignorable="d"
-        Title="Editar Usuario" Icon="imag/usuarios.png" Height="240" Width="352" ResizeMode="NoResize">
+        Title="Editar Usuario" Icon="../imag/usuarios.png" Height="240" Width="380" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

@@ -58,10 +58,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="EditUserWindow.xaml.cs">
+    <Compile Include="Ventanas\EditUserWindow.xaml.cs">
       <DependentUpon>EditUserWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LendBookWindow.xaml.cs">
+    <Compile Include="Ventanas\LendBookWindow.xaml.cs">
       <DependentUpon>LendBookWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modulos\LibrosUserControl.xaml.cs">
@@ -75,15 +75,15 @@
     <Compile Include="Ventanas\ReturnBookWindow.xaml.cs">
       <DependentUpon>ReturnBookWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddUserWindow.xaml">
+    <Page Include="Ventanas\AddUserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditUserWindow.xaml">
+    <Page Include="Ventanas\EditUserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LendBookWindow.xaml">
+    <Page Include="Ventanas\LendBookWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,7 +91,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AddUserWindow.xaml.cs">
+    <Compile Include="Ventanas\AddUserWindow.xaml.cs">
       <DependentUpon>AddUserWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">

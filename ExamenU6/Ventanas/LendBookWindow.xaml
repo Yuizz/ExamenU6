@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenU6"
         mc:Ignorable="d"
-        Title="Prestar libro" Height="210" Width="300">
+        Title="Prestar libro" Icon="../imag/tomarLibro.png" Height="210" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

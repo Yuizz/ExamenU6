@@ -50,11 +50,18 @@ namespace ExamenU6
             }
             while (cadena.Length<1)
             {
-                try
+                if (Port.IsOpen)
                 {
-                    cadena = Port.ReadLine();
+                    try
+                    {
+                        cadena = Port.ReadLine();
+                    }
+                    catch { }
                 }
-                catch { }
+                else
+                {
+                    return "Arduino desconectado!!";
+                }
             }
             cadena = cadena.Replace("\n", string.Empty);
             return cadena;
