@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenU6"
         mc:Ignorable="d"
-        Title="Prestar libro" Icon="../imag/tomarLibro.png" Height="210" Width="300">
+        Title="Prestar libro" Icon="../imag/tomarLibro.png" Height="210" Width="300" Closed="Window_Closed">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -15,8 +15,8 @@
             <Label Content="Prestar libro" FontSize="24" FontFamily="Times New Roman" HorizontalContentAlignment="Center" Style="{StaticResource LabelTitulo}"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Margin="10">
-            <TextBox Name="RFIDBox" FontSize="14" IsReadOnly="True" Margin="20,10" Width="auto" HorizontalContentAlignment="Center"></TextBox>
-            <Button Name="scanCard" Margin="40,5" FontSize="14" Click="scanCard_Click" Style="{StaticResource btnSimple}" Width="auto">Escanear tarjeta</Button>
+            <TextBox Name="RFID" FontSize="14" IsReadOnly="True" Margin="20,10" Width="auto" HorizontalContentAlignment="Center"></TextBox>
+            <Button Name="scanCard" Margin="40,5" FontSize="14" Click="TarjetaRFID_Click" Style="{StaticResource btnSimple}" Width="auto">Escanear tarjeta</Button>
             <Button Name="cancel" Margin="60, 5" FontSize="14" Click="cancel_Click" Style="{StaticResource btnCancelar}" Width="auto">Cancelar</Button>
         </StackPanel>
     </Grid>
