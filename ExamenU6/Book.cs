@@ -13,12 +13,12 @@ namespace ExamenU6
         private string editorial;
         private Boolean taken;
         private string ownedBy;
-        /*public Book(string title, string author, string editorial)
+        public Book(string title, string author, string editorial)
         {
             this.title = title;
             this.author = author;
             this.editorial = editorial;
-        }*/
+        }
         public string Title { get => title; set => title = value; }
         public string Author { get => author; set => author = value; }
         public string Editorial { get => editorial; set => editorial = value; }

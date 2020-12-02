@@ -26,14 +26,13 @@ namespace ExamenU6
         public MainWindow()
         {
             InitializeComponent();
-            //Organizar nuevos libros
-            Books.Add(new Book() { Title = "Razer y la patatus del poder", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
-            Books.Add(new Book() { Title = "El juego de ender", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
-            Books.Add(new Book() { Title = "Harry Potter", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
-            Users.Add(new Student("Jugo", "Tangamandapio", " 0C 74 56 08", "17260671"));
-            Users.Add(new Teacher("Julian Gonzalez", "Cima 2", " 0C 68 56 08", "Metal mecánica"));
+            Books.Add(new Book("Breve Historia de la Ingeniería Mecánica", "Oscar Mauricio Barajas", "Aleta Ediciones"));
+            Books.Add(new Book("Mantenimiento Industrial", "Belén Muñoz Abella", "Editorial Espasa" ));
+            Books.Add(new Book("Matemática aplicada al área de la mecánica", "G. Zorzoli", "Austral Editori"));
+            Books.Add(new Book("Apuntes de fundamentos físicos de la ingeniería", "Enrique Drake Moyano", "Alpha Decay"));
+            Books.Add(new Book("Introducción a la Mecatrónica y los sistemas de medición", "David G. Alciatore", "AlfaOmega"));
+            Users.Add(new Student("Julian Gonzalez", "Calle Primera de mayo #3", " 0C 74 56 08", "17260671"));
         }
-       
         private void menuUsuarios_Selected(object sender, RoutedEventArgs e)
         {
             MostrarContenido(new UsuariosUserControl(Users));

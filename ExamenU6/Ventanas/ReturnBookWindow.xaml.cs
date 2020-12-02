@@ -17,14 +17,14 @@ using System.Threading;
 namespace ExamenU6.Ventanas
 {
     /// <summary>
-    /// Lógica de interacción para ReturnBookWindow.xaml
+    /// Ventana que se encarga de regresar un libro seleccionado
     /// </summary>
     public partial class ReturnBookWindow : Window
     {
         private List<User> Usuarios;
         private List<Book> Libros;
-        private Tools Arduino;
         private string rfid;
+        private Tools Arduino;
         private Thread thread;
         public ReturnBookWindow(List<User> Users, List<Book> Books)
         {
@@ -94,10 +94,6 @@ namespace ExamenU6.Ventanas
         {
             Arduino.closePort();
             this.Close();
-        }
-        void ReturnBookWindow_Closing(object sender, CancelEventArgs e)
-        {
-            Arduino.closePort();
         }
         private void actualizarTabla()
         {
