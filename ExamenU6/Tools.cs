@@ -13,7 +13,7 @@ namespace ExamenU6
     {
         string cadena;
         System.IO.Ports.SerialPort Port;
-        bool isClosed=false;
+        bool request = false;
         public void OpenPort(string name, int baudRate)
         {
             Port = new System.IO.Ports.SerialPort();
@@ -29,46 +29,40 @@ namespace ExamenU6
         public string ReadSerial()
         {
             cadena = "";
-            if (isClosed)
+            if (Port.IsOpen)
             {
-                try 
-                { 
-                    Port.Open(); 
-                    isClosed = false;
-                    return "";
-                } 
-                catch { }
-            }
-            try
-            {
-                Port.WriteLine("2");
-            }
-            catch 
-            {
-                isClosed = true;
-                return "Arduino desconectado!!"; 
-            }
-            while (cadena.Length<1)
-            {
-                if (Port.IsOpen)
+                if (!this.request)
+                {
+                    System.Threading.Thread.Sleep(500);
+                    Port.WriteLine("2");
+                    this.request = true;
+                }
+                else
                 {
                     try
                     {
                         cadena = Port.ReadLine();
                     }
                     catch { }
-                }
-                else
-                {
-                    return "Arduino desconectado!!";
+                    cadena = cadena.Replace("\n", string.Empty);
                 }
             }
-            cadena = cadena.Replace("\n", string.Empty);
+            else
+            {
+                try
+                {
+                    Port.Open();
+                }
+                catch
+                {
+                    cadena = "Arduino desconectado!!";
+                }
+                this.request = false;
+            }
             return cadena;
         }
         public void closePort()
         {
-            isClosed = true;
             if (Port.IsOpen)
             {
                 Port.Close();

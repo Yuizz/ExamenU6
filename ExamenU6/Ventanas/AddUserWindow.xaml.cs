@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using System.Threading;
 
 namespace ExamenU6
 {
@@ -27,12 +28,16 @@ namespace ExamenU6
         private string tipo;
         private List<User> Usuarios;
         private Tools Arduino;
+        private Thread thread;
         public AddUserWindow(List<User> Users)
         {
             InitializeComponent();
-            this.Usuarios = Users;
             Arduino = new Tools();
             Arduino.OpenPort("COM4", 9600);
+
+            thread = new Thread(new ThreadStart(LeerRFID));
+
+            this.Usuarios = Users;
         }
         private void nombre_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -69,8 +74,11 @@ namespace ExamenU6
         }
         private void TarjetaRFID_Click(object sender, RoutedEventArgs e)
         {
-            this.rfid = Arduino.ReadSerial();
-            RFID.Text = this.rfid;
+            if (!thread.IsAlive)
+            {
+                thread = new Thread(new ThreadStart(LeerRFID));
+                thread.Start();
+            }
         }
         private void btnStudent_Click(object sender, RoutedEventArgs e)
         {
@@ -78,14 +86,12 @@ namespace ExamenU6
             Dato4.Text = "Numero de control:";
             boxDato4.Visibility = Visibility.Visible;
         }
-
         private void btnTeacher_Click(object sender, RoutedEventArgs e)
         {
             this.tipo = "Teacher";
             Dato4.Text = "Departamento:";
             boxDato4.Visibility = Visibility.Visible;
         }
-
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
             if (this.tipo != null)
@@ -101,7 +107,6 @@ namespace ExamenU6
                         Usuarios.Add(new Teacher(this.name, this.address, this.rfid, this.dato4));
                     }
                     MessageBox.Show($"Usuario {this.name} añadido.", "Añadir usuario", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Arduino.closePort();
                     this.Close();
                 }
                 else
@@ -114,20 +119,28 @@ namespace ExamenU6
                 MessageBox.Show("Debes seleccionar un tipo de usuario!", "Añadir usuario", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-
         private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
-            Arduino.closePort();
             this.Close();
         }
-        void AddUserWindow_Closing(object sender, CancelEventArgs e)
+        private void LeerRFID()
         {
+            this.rfid = "";
+            do
+            {
+                this.rfid = Arduino.ReadSerial();
+                Application.Current.Dispatcher.Invoke(new Action(() =>
+                {
+                    RFID.Text = this.rfid;
+                }));
+            }
+            while (this.rfid == "" || this.rfid == "Arduino desconectado!!");
             Arduino.closePort();
         }
-        /*public string Name1 { get => name; set => name = value; }
-public string Address { get => address; set => address = value; }
-public string Rfid { get => rfid; set => rfid = value; }
-public string Dato41 { get => dato4; set => dato4 = value; }
-public string Tipo { get => tipo; set => tipo = value; }*/
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Arduino.closePort();
+            thread.Abort();
+        }
     }
 }
