@@ -26,9 +26,10 @@ namespace ExamenU6
         public MainWindow()
         {
             InitializeComponent();
-            Books.Add(new Book() { Title = "Razer y la patatus del poder", Author = "JK Rowling", Editorial = "Salamandra", Taken = true, OwnedBy = "Jugo" });
+            //Organizar nuevos libros
+            Books.Add(new Book() { Title = "Razer y la patatus del poder", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
             Books.Add(new Book() { Title = "El juego de ender", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
-            Books.Add(new Book() { Title = "Harry Potter", Author = "JK Rowling", Editorial = "Salamandra", Taken = true, OwnedBy = "Jugo" });
+            Books.Add(new Book() { Title = "Harry Potter", Author = "JK Rowling", Editorial = "Salamandra", Taken = false, OwnedBy = "" });
             Users.Add(new Student("Jugo", "Tangamandapio", " 0C 74 56 08", "17260671"));
             Users.Add(new Teacher("Julian Gonzalez", "Cima 2", " 0C 68 56 08", "Metal mecánica"));
         }

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace ExamenU6.Ventanas
 {
@@ -24,19 +25,28 @@ namespace ExamenU6.Ventanas
         private List<Book> Libros;
         private Tools Arduino;
         private string rfid;
+        private Thread thread;
         public ReturnBookWindow(List<User> Users, List<Book> Books)
         {
             InitializeComponent();
             Arduino = new Tools();
             Arduino.OpenPort("COM4", 9600);
+
+            thread = new Thread(new ThreadStart(LeerRFID));
+
             this.Usuarios = Users;
             this.Libros = Books;
         }
-
-        private void scanCard_Click(object sender, RoutedEventArgs e)
+        private void TarjetaRFID_Click(object sender, RoutedEventArgs e)
         {
-            this.rfid = Arduino.ReadSerial();
-            RFIDBox.Text = this.rfid;
+            if (!thread.IsAlive)
+            {
+                thread = new Thread(new ThreadStart(LeerRFID));
+                thread.Start();
+            }
+        }
+        private void cardValidator()
+        {
             if (this.rfid != "" && this.rfid != "Arduino desconectado!!")
             {
                 if (Usuarios.Exists(usuario => usuario.Rfid == this.rfid))
@@ -45,9 +55,7 @@ namespace ExamenU6.Ventanas
                 }
                 else
                 {
-                    MessageBox.Show("La tarjeta no pertenece a ningún usuario, registrala primero", "Prestar libro", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Arduino.closePort();
-                    this.Close();
+                    MessageBox.Show("La tarjeta no pertenece a ningún usuario, registrala primero", "Devolver libro", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
@@ -67,7 +75,21 @@ namespace ExamenU6.Ventanas
                 MessageBox.Show("Primero selecciona un libro", "Devolver libro", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
-
+        private void LeerRFID()
+        {
+            this.rfid = "";
+            do
+            {
+                this.rfid = Arduino.ReadSerial();
+                Application.Current.Dispatcher.Invoke(new Action(() =>
+                {
+                    RFID.Text = this.rfid;
+                }));
+            }
+            while (this.rfid == "" || this.rfid == "Arduino desconectado!!");
+            Arduino.closePort();
+            cardValidator();
+        }
         private void cancelar_Click(object sender, RoutedEventArgs e)
         {
             Arduino.closePort();
@@ -79,8 +101,18 @@ namespace ExamenU6.Ventanas
         }
         private void actualizarTabla()
         {
-            listLibros.ItemsSource = null;
-            listLibros.ItemsSource = Usuarios.Find(usuario => usuario.Rfid == this.rfid).LendedBooks;
+            Application.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                listLibros.ItemsSource = null;
+                listLibros.ItemsSource = Usuarios.Find(usuario => usuario.Rfid == this.rfid).LendedBooks;
+                usuario.Text = null;
+                usuario.Text = $"Nombre del usuario: {Usuarios.Find(usuario => usuario.Rfid == this.rfid).Name}";
+            }));
+        }
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Arduino.closePort();
+            thread.Abort();
         }
     }
 }

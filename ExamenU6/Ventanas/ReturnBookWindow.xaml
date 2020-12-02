@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamenU6.Ventanas"
         mc:Ignorable="d"
-        Title="Devolver Libro" Icon="../imag/devLibro.png" Height="450" Width="300">
+        Title="Devolver Libro" Icon="../imag/devLibro.png" Height="450" Width="300" Closed="Window_Closed">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -17,10 +18,11 @@
             <Label Content="Devolver libros" FontSize="24" FontFamily="Times New Roman" HorizontalContentAlignment="Center" Style="{StaticResource LabelTitulo}"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Margin="10">
-            <TextBox Name="RFIDBox" FontSize="14" IsReadOnly="True" Margin="20,10" Width="auto" HorizontalContentAlignment="Center"></TextBox>
-            <Button Name="scanCard" Margin="40,0" FontSize="14" Click="scanCard_Click" Style="{StaticResource btnSimple}" Width="auto">Escanear tarjeta</Button>
+            <TextBox Name="RFID" FontSize="14" IsReadOnly="True" Margin="20,10" Width="auto" HorizontalContentAlignment="Center"></TextBox>
+            <Button Name="scanCard" Margin="40,0" FontSize="14" Click="TarjetaRFID_Click" Style="{StaticResource btnSimple}" Width="auto">Escanear tarjeta</Button>
         </StackPanel>
-        <Grid Grid.Row="2" Background="{StaticResource BrushPrimaryColor}" Margin="0" >
+        <TextBlock Grid.Row="2" Name="usuario" Margin="20,1" FontSize="12" FontWeight="Bold"></TextBlock>
+        <Grid Grid.Row="3" Background="{StaticResource BrushPrimaryColor}" Margin="0" >
             <ListView Margin="5" Name="listLibros">
                 <ListView.View>
                     <GridView>
@@ -31,7 +33,7 @@
                 </ListView.View>
             </ListView>
         </Grid>
-        <Grid Grid.Row="3" Margin="10,5">
+        <Grid Grid.Row="4" Margin="10,5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>

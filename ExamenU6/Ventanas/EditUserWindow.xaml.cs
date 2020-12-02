@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamenU6.Modulos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.ComponentModel;
-using ExamenU6.Modulos;
+using System.Threading;
 
 namespace ExamenU6
 {
@@ -27,11 +28,14 @@ namespace ExamenU6
         private List<User> Usuarios;
         private int user;
         private Tools Arduino;
+        private Thread thread;
         public EditUserWindow(List<User> Users, int selectedUser)
         {
             InitializeComponent();
             Arduino = new Tools();
             Arduino.OpenPort("COM4", 9600);
+
+            thread = new Thread(new ThreadStart(LeerRFID));
 
             this.Usuarios = Users;
             this.user = selectedUser;
@@ -65,8 +69,11 @@ namespace ExamenU6
         }
         private void TarjetaRFID_Click(object sender, RoutedEventArgs e)
         {
-            this.rfid = Arduino.ReadSerial();
-            RFID.Text = this.rfid;
+            if (!thread.IsAlive)
+            {
+                thread = new Thread(new ThreadStart(LeerRFID));
+                thread.Start();
+            }
         }
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
@@ -86,12 +93,26 @@ namespace ExamenU6
         }
         private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
-            Arduino.closePort();
             this.Close();
         }
-        void EditUserWindow_Closing(object sender, CancelEventArgs e)
+        private void LeerRFID()
+        {
+            this.rfid = "";
+            do
+            {
+                this.rfid = Arduino.ReadSerial();
+                Application.Current.Dispatcher.Invoke(new Action(() =>
+                {
+                    RFID.Text = this.rfid;
+                }));
+            }
+            while (this.rfid == "" || this.rfid == "Arduino desconectado!!");
+            Arduino.closePort();
+        }
+        private void Window_Closed(object sender, EventArgs e)
         {
             Arduino.closePort();
+            thread.Abort();
         }
     }
 }
